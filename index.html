@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Javascripts -->
+    <script src="encriptador.js"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <main>
+        <img src="svg/Vector.svg" alt="" class="Logo">
+        <section class="Section">
+            <textarea name="" id="" cols="30" rows="10" class="Section-textarea" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="Section-buttons">
+                <div class="Section-alert">
+                    <img src="svg/bi_exclamation-circle-fill.svg" alt=""> 
+                    <p class="Section-msg">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <button class="Section-button Section-button--encrypt" 
+                id="buttonEncrypt"
+                onclick="encryptInputValue()"> Encriptar</button>
+                <button class="Section-button Section-button--decrypt" 
+                id="buttonDecrypt"
+                onclick="decryptMessageValue()"> Desencriptar</button>
+            </div>
+        </section>
+        <section class="Section2">
+            <img src="svg/Muñeco.svg" class="Section2-img" alt="">
+            <div class="Section2-text">
+                <h3 class="text-center Section2-h3">Ningún mensaje fue encontrado</h3>
+                <h4 class="text-center Section2-h4">Ingresa el texto que desees encriptar o desencriptar.</h4>
+            </div>
+            <div class="Section2-fullMessage">
+                <p id="MessageParagraph"></p>
+                <button class="Section2-copyButton" id="buttonCopy" onclick="copyMessage()">Copiar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

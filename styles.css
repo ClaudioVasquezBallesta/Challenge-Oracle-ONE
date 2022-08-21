@@ -1,0 +1,243 @@
+html {
+    background: #F3F5FC;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+
+}
+.Section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: calc(100vh - 8rem);
+    margin-top: 6rem;
+}
+.Section-textarea {
+    width: 577px;
+    height: 48px;
+    margin: 0 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background: #F3F5FC;
+    color: #0A3871;
+    border: 0;
+    outline: none;
+    resize: vertical;
+}
+.Section-textarea::placeholder {
+    color: #0A3871;
+}
+.Logo {
+    width: 7.5rem;
+    height: 3rem;
+}
+
+.Section-buttons {
+    margin: 3rem auto;
+}
+.Section-alert {
+    display: flex;
+    gap: 0.5rem;
+}
+.Section-alert .Section-msg {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    
+}
+.Section-button--encrypt {
+    width: 20.5rem;
+    height: 4.18rem;
+    background: #0A3871;
+    border-radius: 24px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+.Section-button--decrypt {
+    width: 20.5rem;
+    height: 4.18rem;
+    background: #F3F5FC;
+    /* En caso de estar disabled poner  background: #D8DFE8; */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.Section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+    /* height: calc(100vh - 2rem); */
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.Section2 .Section2-img{
+    text-align: center;
+    display: block;
+    margin: 0 1rem;
+}
+.Section2 .Section2-h3{
+    text-align: center;
+    margin: 1rem 2rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #343A40;
+}
+.Section2 .Section2-h4{
+    text-align: center;
+    margin: 1rem 2rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #495057;
+}
+.Section2-fullMessage {
+    height: calc(100vh - 5rem);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1.5rem;
+}
+.Section2-fullMessage  #MessageParagraph{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    text-align: start !important;
+    overflow-x: auto;
+
+}
+.Section2-fullMessage .Section2-copyButton {
+    width: 21rem;
+    height: 4.18rem;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+/* Para celulares */
+@media screen and (max-width:767px){
+    main {
+        flex-direction: column;
+    }
+    .Section {
+        width: calc(100vw - 2rem);
+    }
+    .Logo {
+        width: 2rem;
+        height: 3rem;
+    }
+    .Section-textarea {
+        width: 21.4rem;
+    }
+    .Section-button--encrypt {
+        display: block;
+        margin-bottom: 1rem;
+        max-width: 21.4rem;
+    }
+    .Section-button--decrypt {
+        display: block;
+        max-width: 21.4rem;
+    }
+    .Section2 {
+        display: block;
+        width: 20.43rem;
+        margin: 2rem auto;
+        min-height: 11.6rem;
+        height: auto;
+    }
+    .Section2 .Section2-img { 
+        display: none;
+    }
+    .Section2 .Section2-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 11.6rem;
+    }
+    .Section2-fullMessage  {
+        height: auto;
+    }
+    .Section2-fullMessage .Section2-copyButton {
+        width: 17.43rem;
+    }
+}
+
+/* Para Tablets */
+@media screen and (min-width:768px) and (max-width:1440px){
+    main {
+        flex-direction: column;
+    }
+    .Section {
+        width: 100%;
+    }
+    .Logo {
+        width: 2rem;
+        height: 3rem;
+    }
+    .Section-textarea {
+        width: 43rem;
+    }
+    .Section-button--encrypt {
+        max-width: 20.75rem;
+        margin-right: 0.5rem;
+    }
+    .Section-button--decrypt {
+        max-width: 20.75rem;
+        margin-left: 0.5rem;
+    }
+    .Section2 {
+        display: block;
+        width: 43rem;
+        margin: 2rem auto;
+        height: auto;
+        min-height: 11.6rem;
+    }
+    .Section2 .Section2-img { 
+        display: none;
+    }
+    .Section2 .Section2-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 11.6rem;
+    }
+    .Section2-fullMessage  {
+        height: auto;
+    }
+    .Section2-fullMessage .Section2-copyButton {
+        width: 39rem;
+    }
+}
